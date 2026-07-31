@@ -22,3 +22,4 @@ jobs:
 
         env:
           LOG_LEVEL: info
+          RENOVATE_REPOSITORIES: aobretin-salt/renovate-demo
