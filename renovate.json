@@ -21,10 +21,10 @@
       "matchManagers": [
         "gradle"
       ],
-      "matchPackagePatterns": [
-        "^org\\.springframework"
-      ],
-      "groupName": "Spring Framework"
+      "groupName": "Spring Framework",
+      "matchPackageNames": [
+        "/^org\\.springframework/"
+      ]
     },
 
     {
@@ -32,13 +32,13 @@
       "matchManagers": [
         "gradle"
       ],
-      "matchPackagePatterns": [
-        "junit",
-        "mockito",
-        "assertj",
-        "testcontainers"
-      ],
-      "groupName": "Testing"
+      "groupName": "Testing",
+      "matchPackageNames": [
+        "/junit/",
+        "/mockito/",
+        "/assertj/",
+        "/testcontainers/"
+      ]
     },
 
     {
