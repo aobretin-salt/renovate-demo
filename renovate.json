@@ -1,0 +1,56 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "extends": [
+    "config:recommended"
+  ],
+
+  "dependencyDashboard": true,
+
+  "labels": [
+    "dependencies"
+  ],
+
+  "prConcurrentLimit": 25,
+
+  "rangeStrategy": "pin",
+
+  "schedule": [
+    "every day"
+  ],
+
+  "packageRules": [
+    {
+      "description": "Group Spring dependencies",
+      "matchManagers": [
+        "gradle"
+      ],
+      "matchPackagePatterns": [
+        "^org\\.springframework"
+      ],
+      "groupName": "Spring Framework"
+    },
+
+    {
+      "description": "Group testing dependencies",
+      "matchManagers": [
+        "gradle"
+      ],
+      "matchPackagePatterns": [
+        "junit",
+        "mockito",
+        "assertj",
+        "testcontainers"
+      ],
+      "groupName": "Testing"
+    },
+
+    {
+      "description": "Automerge patch updates",
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    }
+  ]
+}
